@@ -1,10 +1,10 @@
 # Project Name
 
-[//]: # Node, Express, Typescript, Jest, Docker Hexagonal Architecture Template
+#### Node, Express, Typescript, Jest, Docker Hexagonal Architecture Template
 
 ## Introduction
 
-[//]: # This is a template to run a node.js project that uses hexagonal architecture with docker
+#### This is a template to run a node.js project that uses hexagonal architecture with docker
 
 ## Installation and Usage
 
