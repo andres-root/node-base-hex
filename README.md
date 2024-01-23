@@ -56,7 +56,7 @@ To run tests, follow these steps:
 
 ### Running Without Docker
 
-To run the project without Docker, ensure the Docker backend instance is not running and that you are running a local db instance, then follow these steps:
+To run the project without Docker, ensure the Docker backend instance is not running and that you are running a local PostgreSQL DB instance, then follow these steps:
 
 1. **Install Dependencies**
 
