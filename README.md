@@ -13,7 +13,7 @@
 1. **Clone the Repository**
 
     ```bash
-    git clone [URL to your repository]
+    git clone git@github.com:andres-root/node-base-hex.git
     ```
 
 2. **Build with Docker Compose**
