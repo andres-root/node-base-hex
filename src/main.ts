@@ -3,7 +3,9 @@ import { startExpressApp } from "./adapters/input/rest";
 
 
 // Initialize database
-dbInit();
+(async () => {
+  await dbInit();
+})();
 
 // Start express server
 startExpressApp();

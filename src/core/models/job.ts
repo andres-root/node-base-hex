@@ -1,5 +1,5 @@
 import { DataTypes, Model, Optional } from "sequelize";
-import sequelizeConnection from "../../adapters/output/db/db";
+import db from "../../adapters/output/db/db";
 
 
 export interface JobAttributes {
@@ -52,7 +52,9 @@ Job.init(
     },
   },
   {
-    sequelize: sequelizeConnection,
+    sequelize: db,
+    modelName: "Job",
+    tableName: "Job",
     timestamps: true,
     paranoid: true,
   },

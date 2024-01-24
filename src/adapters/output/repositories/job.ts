@@ -1,4 +1,4 @@
-import { Job } from "../../../core/models";
+import { Job, History } from "../../../core/models";
 import { JobInput, JobOutput } from "../../../core/models/job";
 import { JobOutputPort } from "../../../ports/output/job";
 import db from "../db/db";
@@ -9,6 +9,12 @@ export class JobRepository implements JobOutputPort {
     try {
       const result = await db.transaction(async (transaction) => {
         const newJob = await Job.create(job, {transaction});
+        await History.create({
+          jobId: newJob.id,
+          status: 'created',
+          message: 'Job created',
+        }, { transaction });
+
         return newJob;
       });
 

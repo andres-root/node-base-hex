@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
-import apiRoutes from "./routes";
+import routes from "./routes";
 
 
 const port = process.env.PORT || 3000;
@@ -21,7 +21,7 @@ export const getExpressApp = () => {
     return res.status(200).send({ message: `It works!` });
   });
 
-  app.use("/api/v1", apiRoutes);
+  app.use("/api/v1", routes);
 
   return app;
 };
